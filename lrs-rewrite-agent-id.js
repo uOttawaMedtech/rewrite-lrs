@@ -11,10 +11,11 @@ list_keys = function (err, result) {
   }
 };
 
-var state_keys = lrs.retrieveState(null,
+var result = lrs.retrieveState(Config.stateId,
   {
     activity: new TinCan.Activity({ id : Config.activity_id }),
     agent: new TinCan.Agent({ mbox: Config.agent_mbox }),
+    registration: Config.registration,
     callback: list_keys
   }
 );
