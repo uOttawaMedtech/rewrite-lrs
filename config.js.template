@@ -1,0 +1,14 @@
+(function () {
+  Config = {
+    activity_id: "",
+    agent_mbox: "",
+    record_store: {
+      endpoint: "",
+      username: "",
+      password: "",
+      version:  "1.0.0"
+    }
+  };
+
+  module.exports = Config;
+}());
