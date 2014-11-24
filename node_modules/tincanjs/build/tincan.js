@@ -2530,7 +2530,7 @@ TinCan client library
         },
 
         /**
-        Retrieve a state value, when used from a browser sends to the endpoint using the RESTful interface.
+        Retrieve a state value for a given key or list of state keys if null key given, when used from a browser sends to the endpoint using the RESTful interface.
 
         @method retrieveState
         @param {String} key Key of state to retrieve
@@ -2552,9 +2552,11 @@ TinCan client library
             ;
 
             requestParams = {
-                stateId: key,
                 activityId: cfg.activity.id
             };
+            if (key !== null) {
+                requestParams.stateId = key;
+            }
             if (this.version === "0.9") {
                 requestParams.actor = JSON.stringify(cfg.agent.asVersion(this.version));
             }
