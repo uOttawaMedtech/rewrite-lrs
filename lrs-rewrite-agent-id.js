@@ -1,25 +1,38 @@
-var TinCan = require('tincanjs');
+var TinCan = require('./src/TinCan+LRSRewriter');
 var Config = require('./config.js');
+
+TinCan.DEBUG = true;
 
 var lrs = new TinCan.LRS(Config.record_store);
 
-output_result = function (err, result) {
-  console.log( "\n\nretrieveState\n\n" );
-  if (err === null) {
-    console.log(result);
-  } else {
-    console.log(result);
-  }
-};
+var rw = new TinCan.LRS.Rewriter(lrs);
 
-var result = lrs.retrieveState(Config.stateId,
-  {
-    activity: new TinCan.Activity({ id : Config.activity_id }),
-    agent: new TinCan.Agent({ mbox: Config.agent_mbox }),
-    registration: Config.registration,
-    callback: output_result
-  }
+rw.replaceAgent(
+    {
+        agent: new TinCan.Agent({ mbox: Config.agent_mbox }),
+    },
+    {
+        agent: new TinCan.Agent({ mbox: Config.new_agent_mbox }),
+    }
 );
+
+// output_result = function (err, result) {
+//   console.log( "\n\nretrieveState\n\n" );
+//   if (err === null) {
+//     console.log(result);
+//   } else {
+//     console.log(result);
+//   }
+// };
+//
+// var result = lrs.retrieveState(Config.stateId,
+//   {
+//     activity: new TinCan.Activity({ id : Config.activity_id }),
+//     agent: new TinCan.Agent({ mbox: Config.agent_mbox }),
+//     registration: Config.registration,
+//     callback: output_result
+//   }
+// );
 
 test_save = function () {
   var result = lrs.saveState('test-save-delete', Date.now(),
@@ -85,4 +98,4 @@ test_retrieve_after_delete_output = function (err, result) {
   }
 };
 
-test_save();
+//test_save();
