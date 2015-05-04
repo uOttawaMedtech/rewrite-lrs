@@ -5,7 +5,9 @@ var Config = require('./config.js');
 LRSRewriter.DEBUG = true;
 
 var lrs = new TinCan.LRS(Config.record_store);
-var rw = new LRSRewriter(lrs);
+var rw = new LRSRewriter(lrs, function(err, rw) {
+    
+});
 
 rw.replaceAgent(
     new TinCan.Agent({ mbox: Config.agent_mbox }),
