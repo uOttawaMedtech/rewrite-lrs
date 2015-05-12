@@ -17,8 +17,8 @@ new LRSRewriter(lrs, function(err, rw) {
 
             if (success)
             console.log("Done fetching agents for the following statements")
-            rw.startTasks(function(err, numTasksCompleted){
-                console.log("finished " + numTasksCompleted + " tasks")
+            rw.startTasks(function(err, numTasksCompleted, numTasksQueued){
+                console.log("finished " + numTasksCompleted + " tasks of " + numTasksQueued + " queued")
             })
         }
     );
