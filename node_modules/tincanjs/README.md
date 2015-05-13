@@ -1,6 +1,6 @@
-A JavaScript library for implementing Tin Can API.
+A fork of the [original TinCanJS library](https://github.com/RusticiSoftware/TinCanJS), adapted to query statements from Saltbox's Wax LRS. For details on the problem and the implemented solution, see the [discussion over in the original project](https://github.com/RusticiSoftware/TinCanJS/pull/95).
 
-[![Build Status](https://travis-ci.org/RusticiSoftware/TinCanJS.png)](https://travis-ci.org/RusticiSoftware/TinCanJS)
+[![Build Status](https://travis-ci.org/uOttawaMedtech/TinCanJS.png)](https://travis-ci.org/uOttawaMedtech/TinCanJS)
 
 For hosted API documentation, basic usage instructions, supported version listing, etc. visit the main project website at:
 
@@ -13,7 +13,9 @@ http://tincanapi.com/
 Browser Usage
 -------------
 
-TinCanJS is available via Bower.
+This fork of TinCanJS is available via Bower using:
+
+    bower install uOttawaMedtech/TinCanJS
 
 The browser environment is well tested and supports two kinds of Cross Origin requests which
 is sufficient to cover most versions of Chrome, FireFox, Safari as well as IE 8+. IE 6+ are
@@ -35,7 +37,7 @@ when using this environment.
 
 Install via:
 
-    npm install tincanjs
+    npm install git+ssh://git@github.com:uOttawaMedtech/TinCanJS.git
 
 And within code:
 
