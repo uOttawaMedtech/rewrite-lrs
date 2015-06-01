@@ -7,7 +7,7 @@ LRSRewriter.DEBUG = true;
 var lrs = new TinCan.LRS(Config.record_store);
 new LRSRewriter(lrs, function(err, rw) {
     console.log('Done initiating the database')
-    rw.dryrun = true
+    // rw.dryrun = true
     rw.initReplaceAgent(
         new TinCan.Agent(Config.old_agent),
         new TinCan.Agent(Config.new_agent),
