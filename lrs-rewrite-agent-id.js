@@ -5,13 +5,12 @@ var Config = require('./config.js');
 LRSRewriter.DEBUG = true;
 
 var lrs = new TinCan.LRS(Config.record_store);
-new LRSRewriter(lrs, function(err, rw) {
+new LRSRewriter(lrs, new TinCan.Agent(Config.issuer), function(err, rw) {
     console.log('Done initiating the database')
-    // rw.dryrun = true
-    rw.initReplaceAgent(
+    rw.dryrun = true
+    rw.replaceAgent(
         new TinCan.Agent(Config.old_agent),
         new TinCan.Agent(Config.new_agent),
-        new TinCan.Agent(Config.issuer),
         function(err, stepstaken) {
             if (err)
                 return console.log("An error has occured: " + err)
@@ -22,5 +21,5 @@ new LRSRewriter(lrs, function(err, rw) {
                 console.log("finished " + numTasksCompleted + " tasks of " + numTasksQueued + " queued")
             })
         }
-    );
+    )
 });
