@@ -8,7 +8,7 @@ LRSRewriter.DEBUG = true;
 var lrs = new TinCan.LRS(config.record_store);
 new LRSRewriter(lrs, new TinCan.Agent(config.issuer), function(err, rw) {
     console.log('Done initiating the database')
-    rw.dryrun = true
+    rw.dryrun = config.dryrun || false
     rw.addJobs(
         jobs,
         function(err, stepstaken) {
