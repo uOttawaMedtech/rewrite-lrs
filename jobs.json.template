@@ -1,0 +1,20 @@
+[
+    {
+        "old_agent": {
+          "objectType": "Agent",
+          "mbox": "mailto:oldemail@example.com"
+        },
+        "new_agent": {
+          "mbox": "mailto:newemail@example.com"
+        }
+    },
+    {
+        "old_agent": {
+          "objectType": "Agent",
+          "mbox": "mailto:oldemail2@example.com"
+        },
+        "new_agent": {
+          "mbox": "mailto:newemail2@example.com"
+        }
+    }
+]

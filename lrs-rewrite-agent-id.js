@@ -1,16 +1,16 @@
 var TinCan = require('tincanjs');
 var LRSRewriter = require('./lib/lrsrewriter');
-var Config = require('./config.js');
+var config = require('./config.json');
+var jobs = require('./jobs.json');
 
 LRSRewriter.DEBUG = true;
 
-var lrs = new TinCan.LRS(Config.record_store);
-new LRSRewriter(lrs, new TinCan.Agent(Config.issuer), function(err, rw) {
+var lrs = new TinCan.LRS(config.record_store);
+new LRSRewriter(lrs, new TinCan.Agent(config.issuer), function(err, rw) {
     console.log('Done initiating the database')
     rw.dryrun = true
-    rw.replaceAgent(
-        Config.old_agent,
-        Config.new_agent,
+    rw.addJobs(
+        jobs,
         function(err, stepstaken) {
             if (err)
                 return console.log("An error has occured: " + err)

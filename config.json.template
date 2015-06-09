@@ -1,0 +1,13 @@
+{
+    "issuer": {
+        "objectType": "Agent",
+        "name": "Issuer Name",
+        "mbox": "mailto:issuer@email.com"
+    },
+    "record_store": {
+        "endpoint": "https://example.com/API/",
+        "username": "",
+        "password": "",
+        "version":  "1.0.0"
+    }
+}
