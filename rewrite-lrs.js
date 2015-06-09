@@ -1,5 +1,5 @@
 var TinCan = require('tincanjs');
-var LRSRewriter = require('./lib/lrsrewriter');
+var LRSRewriter = require('./lib/lrs-rewriter');
 var config = require('./config.json');
 var jobs = require('./jobs.json');
 
