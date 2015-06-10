@@ -1,0 +1,36 @@
+{
+  "name": "rewrite-lrs",
+  "version": "0.1.0",
+  "description": "Rewrite statements and state data found in a Learning Record Store (LRS)",
+  "main": "rewrite-lrs.js",
+  "dependencies": {
+    "orm": "^2.1.26",
+    "sqlite3": "^3.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uOttawaMedtech/rewrite-lrs.git"
+  },
+  "keywords": [
+    "lrs",
+    "learning",
+    "record",
+    "store",
+    "xapi",
+    "tincan",
+    "tincanjs",
+    "rewriter",
+    "statements",
+    "state"
+  ],
+  "author": "Pascal Laliberté <plaliberte@uOttawa.ca>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uOttawaMedtech/rewrite-lrs/issues"
+  },
+  "homepage": "https://github.com/uOttawaMedtech/rewrite-lrs"
+}
