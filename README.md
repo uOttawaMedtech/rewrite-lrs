@@ -31,7 +31,7 @@ You can cancel at any time using `Ctrl-C`. Run the command again to pick up wher
 
 ## How to contribute
 
-* Set deterministic UUIDs on re-issued statements to prevent duplicate (UUIDv5 generated from the original uuid + "reissued". See branch `reissued-uuid`)
+* Set deterministic UUIDs on re-issued statements to prevent duplicates (UUIDv5 generated from the original statement's uuid, rehashed with the "reissued" string. See branch `reissued-uuid`)
 * Extract the custom TinCanJS fork. The current build includes a custom fork of [RusticiSoftware/TinCanJS](https://github.com/RusticiSoftware/TinCanJS) that lets rewrite-lrs fetch the list of state entries on an activity/agent/registration
 * Add tests
 * Add support for different xAPI version numbers
