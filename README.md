@@ -25,7 +25,7 @@ This utility will modify a learner's identification in an LRS by rewriting state
 
 ## Run the rewrite
 
-    `node rewrite-lrs`
+    node rewrite-lrs
 
 You can cancel at any time using Ctrl-C. Run the command again to pick up where it left off.
 
