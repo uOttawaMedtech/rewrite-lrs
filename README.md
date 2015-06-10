@@ -27,11 +27,11 @@ This utility will modify a learner's identification in an LRS by rewriting state
 
     node rewrite-lrs
 
-You can cancel at any time using Ctrl-C. Run the command again to pick up where it left off.
+You can cancel at any time using `Ctrl-C`. Run the command again to pick up where it left off.
 
 ## How to contribute
 
-* **Extract the custom TinCanJS fork**. The current build includes a custom fork of [RusticiSoftware/TinCanJS](https://github.com/RusticiSoftware/TinCanJS) that lets rewrite-lrs fetch the list of state entries on an activity/agent/registration
+* Extract the custom TinCanJS fork. The current build includes a custom fork of [RusticiSoftware/TinCanJS](https://github.com/RusticiSoftware/TinCanJS) that lets rewrite-lrs fetch the list of state entries on an activity/agent/registration
 * Add tests
 * Add support for different xAPI version numbers
 * Add rewriting of agentProfile data
