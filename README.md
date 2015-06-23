@@ -10,6 +10,7 @@ This utility will modify a learner's identification in an LRS by rewriting state
 ## Install
 
     git clone https://github.com/uOttawaMedtech/rewrite-lrs.git
+    cd rewrite-lrs
     npm install
 
 ## How to configure rewrite jobs
@@ -25,7 +26,8 @@ This utility will modify a learner's identification in an LRS by rewriting state
 
 ## Run the rewrite
 
-    node rewrite-lrs
+1. Set `dryrun` to `false` in `config.json`
+2. Run `node rewrite-lrs`
 
 You can cancel at any time using `Ctrl-C`. Run the command again to pick up where it left off.
 
